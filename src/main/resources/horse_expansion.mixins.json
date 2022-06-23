@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.donkad.horse.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "ExampleMixin",
+    "AbstractHorseMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
