@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(AbstractHorseEntity.class)
 public abstract class AbstractHorseMixin extends AnimalEntity {
     @Shadow private float lastAngryAnimationProgress;
-    public String secondPassenger = "SecondPassenger";
+    private String secondPassenger = "SecondPassenger";
 
     protected AbstractHorseMixin(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
