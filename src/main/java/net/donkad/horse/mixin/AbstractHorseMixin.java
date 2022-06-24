@@ -6,7 +6,6 @@ import net.minecraft.entity.passive.AbstractDonkeyEntity;
 import net.minecraft.entity.passive.AbstractHorseEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
@@ -22,9 +21,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(AbstractHorseEntity.class)
 public abstract class AbstractHorseMixin extends AnimalEntity {
     @Shadow private float lastAngryAnimationProgress;
-
-    @Shadow public abstract void readCustomDataFromNbt(NbtCompound nbt);
-
     public String secondPassenger = "SecondPassenger";
     AbstractDonkeyEntity abstractDonkeyEntity;
 
