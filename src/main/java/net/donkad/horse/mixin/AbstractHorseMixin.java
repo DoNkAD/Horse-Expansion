@@ -22,7 +22,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class AbstractHorseMixin extends AnimalEntity {
     @Shadow private float lastAngryAnimationProgress;
     public String secondPassenger = "SecondPassenger";
-    AbstractDonkeyEntity abstractDonkeyEntity;
 
     protected AbstractHorseMixin(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -78,9 +77,6 @@ public abstract class AbstractHorseMixin extends AnimalEntity {
     }
 
     protected int getMaxPassengers() {
-        if (abstractDonkeyEntity.hasChest()){
-            return 1;
-        }
         return 2;
     }
 
